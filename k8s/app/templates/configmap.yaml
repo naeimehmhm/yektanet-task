@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "hasan"
+data:
+  {{- with .Values.env }}
+  NAME: {{ .Values.env.name }}
+  REDIS_HOST: {{ .Values.env.redisHost }}
+  {{- end }}

@@ -1,0 +1,39 @@
+replicaCount: 1
+
+image:
+  repository: yektatech/jtask
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+enva:
+  namae: "Javad"
+  redisHost: "redis"
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
